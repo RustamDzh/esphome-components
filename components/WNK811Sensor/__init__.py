@@ -11,7 +11,7 @@ AUTO_LOAD = ["sensor"]
 DEPENDENCIES = ["i2c"]
 
 wnk811sensor_ns = cg.esphome_ns.namespace("wnk811sensor")
-WNK811SensorComponent = wnk811sensor_ns.class_("WNK811SensorComponent", cg.Component, i2c.I2CDevice)
+WNK811Sensor = wnk811sensor_ns.class_("WNK811Sensor", cg.Component, i2c.I2CDevice)
 
 CONFIG_SCHEMA = cv.Schema({
     cv.GenerateID(): cv.declare_id(WNK811SensorComponent),
