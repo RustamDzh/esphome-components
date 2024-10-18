@@ -18,13 +18,13 @@ AUTO_LOAD = [ "binary_sensor", "sensor" ]
 CONF_DATA_PIN = "data_pin"
 CONF_CLOCK_PIN = "clock_pin"
 
-sht1xsensor_ns = cg.esphome_ns.namespace('sht1xsensor')
-SHT1XSensor = sht1xsensor_ns.class_('SHT1XSensor', cg.Component)
+wnk811sensor_ns = cg.esphome_ns.namespace('wnk811sensor')
+WNK811Sensor = wnk811sensor_ns.class_('WNK811Sensor', cg.Component)
 
 CONFIG_SCHEMA = (
     cv.Schema(
         {
-            cv.GenerateID(): cv.declare_id(SHT1XSensor),
+            cv.GenerateID(): cv.declare_id(WNK811Sensor),
             cv.Optional(CONF_HUMIDITY): sensor.sensor_schema(
                 unit_of_measurement=UNIT_PERCENT,
                 accuracy_decimals=0,
